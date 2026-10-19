@@ -19,3 +19,34 @@
 .telemetry-image img{width:100%;height:auto;display:block;border:1px solid #5a719d}
 .concept-note{font-size:11px;color:#c6cddd;margin:10px 0 0}
 @media(max-width:800px){.service-collage img{height:125px}}
+
+
+/* CRF: tarjetas fotográficas con imágenes originales de la empresa */
+#servicios .cards{align-items:stretch}
+#servicios .service-photo-card{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:370px;padding:30px;border:0;border-radius:10px;background:#112348;color:white;box-shadow:0 14px 30px #101b3830;transition:transform .2s ease,box-shadow .2s ease}
+#servicios .service-photo-card:hover{transform:translateY(-3px);box-shadow:0 18px 38px #101b3840}
+#servicios .service-photo-card .service-collage{position:absolute;inset:0;z-index:-2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:3px;margin:0;border-radius:0;width:100%;height:100%}
+#servicios .service-photo-card .service-collage img{width:100%;height:100%;min-height:0;object-fit:cover;background:#162951}
+#servicios .service-photo-card .service-collage img:nth-child(1):nth-last-child(2),#servicios .service-photo-card .service-collage img:nth-child(2):last-child{grid-row:1 / 3}
+#servicios .service-photo-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,18,39,.13) 0%,rgba(9,23,49,.56) 42%,rgba(6,17,38,.97) 100%);pointer-events:none}
+#servicios .service-photo-card .number{color:var(--gold);font-size:12px;letter-spacing:2px;margin-bottom:14px}
+#servicios .service-photo-card .symbol{display:none}
+#servicios .service-photo-card h3{color:white;font-size:25px;margin:0 0 10px;text-shadow:0 1px 6px #07122680}
+#servicios .service-photo-card p{color:#e6edf8;font-size:14px;line-height:1.55;margin:0}
+/* Equipos: imagen a pantalla de tarjeta y texto superpuesto */
+#equipos .equipment{align-items:stretch}
+#equipos .equipment-photo-card{position:relative;isolation:isolate;display:flex;align-items:flex-end;overflow:hidden;min-height:385px;border:0;border-radius:10px;background:#112348;box-shadow:0 14px 30px #101b3826}
+#equipos .equipment-photo-card .equipment-visual{position:absolute;inset:0;height:auto;display:block;z-index:-2;background:linear-gradient(145deg,#1a2c53,#0c1732)}
+#equipos .equipment-photo-card .equipment-visual img{width:100%;height:100%;padding:0;object-fit:cover;object-position:center;display:block}
+/* Mantener compresor completo, sin cortar la máquina */
+#equipos .equipment-photo-card:first-child .equipment-visual img{object-fit:contain;object-position:center 28%;padding:10px 10px 115px}
+/* Mostrar cámaras y sistemas sin recortes agresivos */
+#equipos .equipment-photo-card:nth-child(2) .equipment-visual img{object-fit:contain;object-position:center 20%;padding:8px 8px 110px}
+#equipos .equipment-photo-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,15,35,.03) 0%,rgba(5,15,35,.22) 38%,rgba(5,15,35,.96) 74%,#07152f 100%);pointer-events:none}
+#equipos .equipment-photo-card .equipment-body{padding:26px 26px 28px;width:100%;position:relative}
+#equipos .equipment-photo-card .equipment-body span{color:var(--gold)}
+#equipos .equipment-photo-card .equipment-body h3{color:white;font-size:24px;margin:8px 0 8px}
+#equipos .equipment-photo-card .equipment-body p{color:#e0e8f4;margin-bottom:12px}
+#equipos .equipment-photo-card .equipment-body a{color:var(--gold)}
+@media(max-width:800px){#servicios .service-photo-card{min-height:350px}#equipos .equipment-photo-card{min-height:380px}}
+@media(prefers-reduced-motion:reduce){#servicios .service-photo-card{transition:none}}
