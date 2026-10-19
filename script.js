@@ -1,3 +1,2 @@
 document.getElementById('year').textContent=new Date().getFullYear();
 const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
-document.getElementById('contact-form').addEventListener('submit',e=>{e.preventDefault();alert('Formulario de demostración: falta configurar el correo oficial de CRF para enviar las cotizaciones. No se ha enviado ningún mensaje.');});
