@@ -7,3 +7,15 @@
 
 /* Fotografías y videos CRF: misma paleta corporativa */
 .equipment-visual{overflow:hidden}.equipment-visual img{width:100%;height:100%;object-fit:cover;display:block}.gallery-heading{margin:35px 0 14px;font-size:22px;color:var(--dark)}.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.photo-card{margin:0;background:#fff;border:1px solid #e2e8f0;overflow:hidden}.photo-card img{width:100%;height:230px;object-fit:cover;display:block}.photo-card figcaption{padding:13px 16px;font-size:13px;font-weight:700;color:var(--text)}.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.video-grid article{min-width:0}.video-grid h3{font-size:19px}.video-grid video,.video-frame iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:var(--dark)}.video-frame{width:100%}@media(max-width:800px){.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-card img{height:180px}.video-grid{grid-template-columns:1fr}nav{gap:18px}}@media(max-width:480px){.photo-grid{grid-template-columns:1fr}.photo-card img{height:230px}}
+
+/* Mejoras CRF: collage de equipos reales, fotografías completas y telemetría */
+.service-collage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:18px;overflow:hidden;border-radius:4px}
+.service-collage img{width:100%;height:92px;object-fit:cover;background:#edf1f7;display:block}
+.service-collage img:only-child{grid-column:span 2}
+.equipment-visual{background:#f6f8fb}
+.equipment-visual img{object-fit:contain;object-position:center center;padding:5px}
+.equipment article:first-child .equipment-visual img{object-fit:contain}
+.telemetry-image{padding:0;min-height:0;border:0;background:transparent}
+.telemetry-image img{width:100%;height:auto;display:block;border:1px solid #5a719d}
+.concept-note{font-size:11px;color:#c6cddd;margin:10px 0 0}
+@media(max-width:800px){.service-collage img{height:125px}}
