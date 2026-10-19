@@ -50,3 +50,8 @@
 #equipos .equipment-photo-card .equipment-body a{color:var(--gold)}
 @media(max-width:800px){#servicios .service-photo-card{min-height:350px}#equipos .equipment-photo-card{min-height:380px}}
 @media(prefers-reduced-motion:reduce){#servicios .service-photo-card{transition:none}}
+
+/* CRF: elementos filtrantes reales METALPLAN en la tarjeta de filtración */
+#servicios .service-photo-card .service-collage.filtracion-metalplan{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:1fr;gap:3px;background:#e9eef4}
+#servicios .service-photo-card .service-collage.filtracion-metalplan img{grid-column:auto!important;grid-row:auto!important;width:100%;height:100%;object-fit:contain;object-position:center center;background:#eef2f6;padding:5px}
+#servicios .service-photo-card .service-collage.filtracion-metalplan img:last-child{object-fit:cover;padding:0}
